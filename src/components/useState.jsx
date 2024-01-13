@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CiCirclePlus,CiCircleMinus } from "react-icons/ci";
 const counter = () => {
 const [count, setCount] = useState(0);
+useEffect(() => {
+  document.title = count;
+},[count]);
 return (
     <>
     <div className="flex justify-center items-center">
